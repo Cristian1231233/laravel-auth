@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -19,18 +19,15 @@
                             <th scope="row">{{$post->id}}</th>
                             <td>{{$post->title}}</td>
                             <td>{{$post->content}}</td>
+                            <td><a href="{{ route('admin.posts.show', $post) }}" class="btn btn-info">Show</a></td>
+                            <td><a href="" class="btn btn-success">Edit</a></td>
+                            <td><a href="" class="btn btn-danger">Delete</a></td>
                         </tr>
                   @endforeach
                   <tr>
                 </tbody>
               </table>
-                        {{-- @foreach ($posts as $post)
-                        <tr>
-                            <th>{{$post->id}}</th>
-                            <th>{{$post->title}}</th>
-                            <th>{{$post->content}}</th>
-                        </tr>
-                        @endforeach --}}
+                        
                   
     </div>
     
